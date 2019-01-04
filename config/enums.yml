@@ -82,6 +82,7 @@ APPLICANT_ROLES:
 USER_ROLES:
   - administrator
   - advertiser
+  - employer
   - publisher
 
 CAMPAIGN_STATUSES:
