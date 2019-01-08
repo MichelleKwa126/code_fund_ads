@@ -10316,7 +10316,7 @@
   {
     "country_name": "Japan",
     "country_code": "JP",
-    "province_name": "Hokkaidô [Hokkaido]",
+    "province_name": "Hokkaidô",
     "subdivision": "01"
   },
   {
@@ -10352,7 +10352,7 @@
   {
     "country_name": "Japan",
     "country_code": "JP",
-    "province_name": "Hukusima [Fukushima]",
+    "province_name": "Hukusima",
     "subdivision": "07"
   },
   {
@@ -10364,7 +10364,7 @@
   {
     "country_name": "Japan",
     "country_code": "JP",
-    "province_name": "Totigi [Tochigi]",
+    "province_name": "Totigi",
     "subdivision": "09"
   },
   {
@@ -10382,13 +10382,13 @@
   {
     "country_name": "Japan",
     "country_code": "JP",
-    "province_name": "Tiba [Chiba]",
+    "province_name": "Tiba",
     "subdivision": "12"
   },
   {
     "country_name": "Japan",
     "country_code": "JP",
-    "province_name": "Tôkyô [Tokyo]",
+    "province_name": "Tôkyô",
     "subdivision": "13"
   },
   {
@@ -10412,19 +10412,19 @@
   {
     "country_name": "Japan",
     "country_code": "JP",
-    "province_name": "Isikawa [Ishikawa]",
+    "province_name": "Isikawa",
     "subdivision": "17"
   },
   {
     "country_name": "Japan",
     "country_code": "JP",
-    "province_name": "Hukui [Fukui]",
+    "province_name": "Hukui",
     "subdivision": "18"
   },
   {
     "country_name": "Japan",
     "country_code": "JP",
-    "province_name": "Yamanasi [Yamanashi]",
+    "province_name": "Yamanasi",
     "subdivision": "19"
   },
   {
@@ -10436,19 +10436,19 @@
   {
     "country_name": "Japan",
     "country_code": "JP",
-    "province_name": "Gihu [Gifu]",
+    "province_name": "Gihu",
     "subdivision": "21"
   },
   {
     "country_name": "Japan",
     "country_code": "JP",
-    "province_name": "Sizuoka [Shizuoka]",
+    "province_name": "Sizuoka",
     "subdivision": "22"
   },
   {
     "country_name": "Japan",
     "country_code": "JP",
-    "province_name": "Aiti [Aichi]",
+    "province_name": "Aiti",
     "subdivision": "23"
   },
   {
@@ -10460,25 +10460,25 @@
   {
     "country_name": "Japan",
     "country_code": "JP",
-    "province_name": "Siga [Shiga]",
+    "province_name": "Siga",
     "subdivision": "25"
   },
   {
     "country_name": "Japan",
     "country_code": "JP",
-    "province_name": "Kyôto [Kyoto]",
+    "province_name": "Kyôto",
     "subdivision": "26"
   },
   {
     "country_name": "Japan",
     "country_code": "JP",
-    "province_name": "Ôsaka [Osaka]",
+    "province_name": "Ôsaka",
     "subdivision": "27"
   },
   {
     "country_name": "Japan",
     "country_code": "JP",
-    "province_name": "Hyôgo [Hyogo]",
+    "province_name": "Hyôgo",
     "subdivision": "28"
   },
   {
@@ -10502,7 +10502,7 @@
   {
     "country_name": "Japan",
     "country_code": "JP",
-    "province_name": "Simane [Shimane]",
+    "province_name": "Simane",
     "subdivision": "32"
   },
   {
@@ -10514,19 +10514,19 @@
   {
     "country_name": "Japan",
     "country_code": "JP",
-    "province_name": "Hirosima [Hiroshima]",
+    "province_name": "Hirosima",
     "subdivision": "34"
   },
   {
     "country_name": "Japan",
     "country_code": "JP",
-    "province_name": "Yamaguti [Yamaguchi]",
+    "province_name": "Yamaguti",
     "subdivision": "35"
   },
   {
     "country_name": "Japan",
     "country_code": "JP",
-    "province_name": "Tokusima [Tokushima]",
+    "province_name": "Tokusima",
     "subdivision": "36"
   },
   {
@@ -10544,13 +10544,13 @@
   {
     "country_name": "Japan",
     "country_code": "JP",
-    "province_name": "Kôti [Kochi]",
+    "province_name": "Kôti",
     "subdivision": "39"
   },
   {
     "country_name": "Japan",
     "country_code": "JP",
-    "province_name": "Hukuoka [Fukuoka]",
+    "province_name": "Hukuoka",
     "subdivision": "40"
   },
   {
@@ -10574,7 +10574,7 @@
   {
     "country_name": "Japan",
     "country_code": "JP",
-    "province_name": "Ôita [Oita]",
+    "province_name": "Ôita",
     "subdivision": "44"
   },
   {
@@ -10586,7 +10586,7 @@
   {
     "country_name": "Japan",
     "country_code": "JP",
-    "province_name": "Kagosima [Kagoshima]",
+    "province_name": "Kagosima",
     "subdivision": "46"
   },
   {
@@ -11078,7 +11078,7 @@
   {
     "country_name": "Lao People's Democratic Republic",
     "country_code": "LA",
-    "province_name": "Attapu [Attopeu]",
+    "province_name": "Attapu",
     "subdivision": "AT"
   },
   {
@@ -11090,13 +11090,13 @@
   {
     "country_name": "Lao People's Democratic Republic",
     "country_code": "LA",
-    "province_name": "Bolikhamxai [Borikhane]",
+    "province_name": "Bolikhamxai",
     "subdivision": "BL"
   },
   {
     "country_name": "Lao People's Democratic Republic",
     "country_code": "LA",
-    "province_name": "Champasak [Champassak]",
+    "province_name": "Champasak",
     "subdivision": "CH"
   },
   {
@@ -11120,25 +11120,25 @@
   {
     "country_name": "Lao People's Democratic Republic",
     "country_code": "LA",
-    "province_name": "Louangphabang [Louang Prabang)",
+    "province_name": "Louangphabang",
     "subdivision": "LP"
   },
   {
     "country_name": "Lao People's Democratic Republic",
     "country_code": "LA",
-    "province_name": "Oudomxai [Oudomsai]",
+    "province_name": "Oudomxai",
     "subdivision": "OU"
   },
   {
     "country_name": "Lao People's Democratic Republic",
     "country_code": "LA",
-    "province_name": "Phôngsali [Phong Saly]",
+    "province_name": "Phôngsali",
     "subdivision": "PH"
   },
   {
     "country_name": "Lao People's Democratic Republic",
     "country_code": "LA",
-    "province_name": "Salavan [Saravane]",
+    "province_name": "Salavan",
     "subdivision": "SL"
   },
   {
@@ -11162,19 +11162,19 @@
   {
     "country_name": "Lao People's Democratic Republic",
     "country_code": "LA",
-    "province_name": "Xaignabouli [Sayaboury]",
+    "province_name": "Xaignabouli",
     "subdivision": "XA"
   },
   {
     "country_name": "Lao People's Democratic Republic",
     "country_code": "LA",
-    "province_name": "Xékong [Sékong]",
+    "province_name": "Xékong",
     "subdivision": "XE"
   },
   {
     "country_name": "Lao People's Democratic Republic",
     "country_code": "LA",
-    "province_name": "Xiangkhoang [Xieng Khouang]",
+    "province_name": "Xiangkhoang",
     "subdivision": "XI"
   },
   {
@@ -14546,7 +14546,7 @@
   {
     "country_name": "Morocco",
     "country_code": "MA",
-    "province_name": "Casablanca [Dar el Beïda]*",
+    "province_name": "Casablanca *",
     "subdivision": "CAS"
   },
   {
@@ -15290,7 +15290,7 @@
   {
     "country_name": "Nepal",
     "country_code": "NP",
-    "province_name": "Kosi [Koshi]",
+    "province_name": "Kosi",
     "subdivision": "KO"
   },
   {
@@ -16556,7 +16556,7 @@
   {
     "country_name": "Peru",
     "country_code": "PE",
-    "province_name": "Cuzco [Cusco]",
+    "province_name": "Cuzco",
     "subdivision": "CUS"
   },
   {
@@ -17144,7 +17144,7 @@
   {
     "country_name": "Philippines",
     "country_code": "PH",
-    "province_name": "Zamboanga Sibuguey [Zamboanga Sibugay]",
+    "province_name": "Zamboanga Sibuguey",
     "subdivision": "ZSI"
   },
   {
@@ -20546,7 +20546,7 @@
   {
     "country_name": "Spain",
     "country_code": "ES",
-    "province_name": "Barcelona  [Barcelona]",
+    "province_name": "Barcelona",
     "subdivision": "B"
   },
   {
@@ -20570,7 +20570,7 @@
   {
     "country_name": "Spain",
     "country_code": "ES",
-    "province_name": "A Coruña  [La Coruña]",
+    "province_name": "A Coruña",
     "subdivision": "C"
   },
   {
@@ -20624,7 +20624,7 @@
   {
     "country_name": "Spain",
     "country_code": "ES",
-    "province_name": "Girona  [Gerona]",
+    "province_name": "Girona",
     "subdivision": "GI"
   },
   {
@@ -20660,7 +20660,7 @@
   {
     "country_name": "Spain",
     "country_code": "ES",
-    "province_name": "Lleida  [Lérida]",
+    "province_name": "Lleida",
     "subdivision": "L"
   },
   {
@@ -20678,7 +20678,7 @@
   {
     "country_name": "Spain",
     "country_code": "ES",
-    "province_name": "Lugo  [Lugo]",
+    "province_name": "Lugo",
     "subdivision": "LU"
   },
   {
@@ -20720,7 +20720,7 @@
   {
     "country_name": "Spain",
     "country_code": "ES",
-    "province_name": "Ourense  [Orense]",
+    "province_name": "Ourense",
     "subdivision": "OR"
   },
   {
@@ -20732,13 +20732,13 @@
   {
     "country_name": "Spain",
     "country_code": "ES",
-    "province_name": "Balears  [Baleares]",
+    "province_name": "Balears",
     "subdivision": "PM"
   },
   {
     "country_name": "Spain",
     "country_code": "ES",
-    "province_name": "Pontevedra  [Pontevedra]",
+    "province_name": "Pontevedra",
     "subdivision": "PO"
   },
   {
@@ -20780,7 +20780,7 @@
   {
     "country_name": "Spain",
     "country_code": "ES",
-    "province_name": "Tarragona  [Tarragona]",
+    "province_name": "Tarragona",
     "subdivision": "T"
   },
   {
@@ -21224,127 +21224,127 @@
   {
     "country_name": "Sweden",
     "country_code": "SE",
-    "province_name": "Stockholms län[SE-01]",
+    "province_name": "Stockholms län",
     "subdivision": "AB"
   },
   {
     "country_name": "Sweden",
     "country_code": "SE",
-    "province_name": "Västerbottens län[SE-24]",
+    "province_name": "Västerbottens län",
     "subdivision": "AC"
   },
   {
     "country_name": "Sweden",
     "country_code": "SE",
-    "province_name": "Norrbottens län[SE-25]",
+    "province_name": "Norrbottens län",
     "subdivision": "BD"
   },
   {
     "country_name": "Sweden",
     "country_code": "SE",
-    "province_name": "Uppsala län[SE-03]",
+    "province_name": "Uppsala län",
     "subdivision": "C"
   },
   {
     "country_name": "Sweden",
     "country_code": "SE",
-    "province_name": "Södermanlands län[SE-04]",
+    "province_name": "Södermanlands län",
     "subdivision": "D"
   },
   {
     "country_name": "Sweden",
     "country_code": "SE",
-    "province_name": "Östergötlands län[SE-05]",
+    "province_name": "Östergötlands län",
     "subdivision": "E"
   },
   {
     "country_name": "Sweden",
     "country_code": "SE",
-    "province_name": "Jönköpings län[SE-06]",
+    "province_name": "Jönköpings län",
     "subdivision": "F"
   },
   {
     "country_name": "Sweden",
     "country_code": "SE",
-    "province_name": "Kronoborgs län[SE-07]",
+    "province_name": "Kronoborgs län",
     "subdivision": "G"
   },
   {
     "country_name": "Sweden",
     "country_code": "SE",
-    "province_name": "Kalmar län[SE-08]",
+    "province_name": "Kalmar län",
     "subdivision": "H"
   },
   {
     "country_name": "Sweden",
     "country_code": "SE",
-    "province_name": "Gotlands län[SE-09]",
+    "province_name": "Gotlands län",
     "subdivision": "I"
   },
   {
     "country_name": "Sweden",
     "country_code": "SE",
-    "province_name": "Blekinge län[SE-10]",
+    "province_name": "Blekinge län",
     "subdivision": "K"
   },
   {
     "country_name": "Sweden",
     "country_code": "SE",
-    "province_name": "Skåne län[SE-12]",
+    "province_name": "Skåne län",
     "subdivision": "M"
   },
   {
     "country_name": "Sweden",
     "country_code": "SE",
-    "province_name": "Hallands län[SE-13]",
+    "province_name": "Hallands län",
     "subdivision": "N"
   },
   {
     "country_name": "Sweden",
     "country_code": "SE",
-    "province_name": "Västra Götalands län[SE-14]",
+    "province_name": "Västra Götalands län",
     "subdivision": "O"
   },
   {
     "country_name": "Sweden",
     "country_code": "SE",
-    "province_name": "Värmlands län[SE-17]",
+    "province_name": "Värmlands län",
     "subdivision": "S"
   },
   {
     "country_name": "Sweden",
     "country_code": "SE",
-    "province_name": "Örebro län[SE-18]",
+    "province_name": "Örebro län",
     "subdivision": "T"
   },
   {
     "country_name": "Sweden",
     "country_code": "SE",
-    "province_name": "Västmanlands län[SE-19]",
+    "province_name": "Västmanlands län",
     "subdivision": "U"
   },
   {
     "country_name": "Sweden",
     "country_code": "SE",
-    "province_name": "Dalarnes län[SE-20]",
+    "province_name": "Dalarnes län",
     "subdivision": "W"
   },
   {
     "country_name": "Sweden",
     "country_code": "SE",
-    "province_name": "Gävleborgs län[SE-21]",
+    "province_name": "Gävleborgs län",
     "subdivision": "X"
   },
   {
     "country_name": "Sweden",
     "country_code": "SE",
-    "province_name": "Västernorrlands län[SE-22]",
+    "province_name": "Västernorrlands län",
     "subdivision": "Y"
   },
   {
     "country_name": "Sweden",
     "country_code": "SE",
-    "province_name": "Jämtlands län[SE-23]",
+    "province_name": "Jämtlands län",
     "subdivision": "Z"
   },
   {
@@ -21902,7 +21902,7 @@
   {
     "country_name": "Thailand",
     "country_code": "TH",
-    "province_name": "Krung Thep Maha Nakhon [Bangkok]",
+    "province_name": "Krung Thep Maha Nakhon",
     "subdivision": "10"
   },
   {
@@ -24002,7 +24002,7 @@
   {
     "country_name": "United Kingdom",
     "country_code": "GB",
-    "province_name": "Isle of Anglesey [Sir Ynys Môn GB-YNM]",
+    "province_name": "Isle of Anglesey",
     "subdivision": "AGY"
   },
   {
@@ -24074,7 +24074,7 @@
   {
     "country_name": "United Kingdom",
     "country_code": "GB",
-    "province_name": "Bridgend [Pen-y-bont ar Ogwr GB-POG]",
+    "province_name": "Bridgend",
     "subdivision": "BGE"
   },
   {
@@ -24188,7 +24188,7 @@
   {
     "country_name": "United Kingdom",
     "country_code": "GB",
-    "province_name": "Caerphilly [Caerffili GB-CAF]",
+    "province_name": "Caerphilly",
     "subdivision": "CAY"
   },
   {
@@ -24200,7 +24200,7 @@
   {
     "country_name": "United Kingdom",
     "country_code": "GB",
-    "province_name": "Ceredigion [Sir Ceredigion]",
+    "province_name": "Ceredigion",
     "subdivision": "CGN"
   },
   {
@@ -24266,7 +24266,7 @@
   {
     "country_name": "United Kingdom",
     "country_code": "GB",
-    "province_name": "Carmarthenshire [Sir Gaerfyrddin GB-GFY]",
+    "province_name": "Carmarthenshire",
     "subdivision": "CMN"
   },
   {
@@ -24284,7 +24284,7 @@
   {
     "country_name": "United Kingdom",
     "country_code": "GB",
-    "province_name": "Cardiff [Caerdydd GB-CRD]",
+    "province_name": "Cardiff",
     "subdivision": "CRF"
   },
   {
@@ -24320,7 +24320,7 @@
   {
     "country_name": "United Kingdom",
     "country_code": "GB",
-    "province_name": "Denbighshire [Sir Ddinbych GB-DDB]",
+    "province_name": "Denbighshire",
     "subdivision": "DEN"
   },
   {
@@ -24476,7 +24476,7 @@
   {
     "country_name": "United Kingdom",
     "country_code": "GB",
-    "province_name": "Flintshire [Sir y Fflint GB-FFL]",
+    "province_name": "Flintshire",
     "subdivision": "FLN"
   },
   {
@@ -24758,7 +24758,7 @@
   {
     "country_name": "United Kingdom",
     "country_code": "GB",
-    "province_name": "Monmouthshire [Sir Fynwy GB-FYN]",
+    "province_name": "Monmouthshire",
     "subdivision": "MON"
   },
   {
@@ -24776,7 +24776,7 @@
   {
     "country_name": "United Kingdom",
     "country_code": "GB",
-    "province_name": "Merthyr Tydfil [Merthyr Tudful GB-MTU]",
+    "province_name": "Merthyr Tydfil",
     "subdivision": "MTY"
   },
   {
@@ -24860,7 +24860,7 @@
   {
     "country_name": "United Kingdom",
     "country_code": "GB",
-    "province_name": "Neath Port Talbot [Castell-nedd Port Talbot GB-CTL]",
+    "province_name": "Neath Port Talbot",
     "subdivision": "NTL"
   },
   {
@@ -24884,7 +24884,7 @@
   {
     "country_name": "United Kingdom",
     "country_code": "GB",
-    "province_name": "Newport [Casnewydd GB-CNW]",
+    "province_name": "Newport",
     "subdivision": "NWP"
   },
   {
@@ -24926,7 +24926,7 @@
   {
     "country_name": "United Kingdom",
     "country_code": "GB",
-    "province_name": "Pembrokeshire [Sir Benfro GB-BNF]",
+    "province_name": "Pembrokeshire",
     "subdivision": "PEM"
   },
   {
@@ -24980,7 +24980,7 @@
   {
     "country_name": "United Kingdom",
     "country_code": "GB",
-    "province_name": "Rhondda, Cynon, Taff [Rhondda, Cynon,Taf]",
+    "province_name": "Rhondda, Cynon, Taff",
     "subdivision": "RCT"
   },
   {
@@ -25178,7 +25178,7 @@
   {
     "country_name": "United Kingdom",
     "country_code": "GB",
-    "province_name": "Swansea [Abertawe GB-ATA]",
+    "province_name": "Swansea",
     "subdivision": "SWA"
   },
   {
@@ -25220,7 +25220,7 @@
   {
     "country_name": "United Kingdom",
     "country_code": "GB",
-    "province_name": "Torfaen [Tor-faen]",
+    "province_name": "Torfaen",
     "subdivision": "TOF"
   },
   {
@@ -25238,7 +25238,7 @@
   {
     "country_name": "United Kingdom",
     "country_code": "GB",
-    "province_name": "Vale of Glamorgan, The [Bro Morgannwg GB-BMG]",
+    "province_name": "Vale of Glamorgan, The",
     "subdivision": "VGL"
   },
   {
@@ -25340,7 +25340,7 @@
   {
     "country_name": "United Kingdom",
     "country_code": "GB",
-    "province_name": "Wrexham [Wrecsam GB-WRC]",
+    "province_name": "Wrexham",
     "subdivision": "WRX"
   },
   {
@@ -26672,7 +26672,7 @@
   {
     "country_name": "Yemen",
     "country_code": "YE",
-    "province_name": "Şanʻā' [city]",
+    "province_name": "Şanʻā'",
     "subdivision": "SA"
   },
   {

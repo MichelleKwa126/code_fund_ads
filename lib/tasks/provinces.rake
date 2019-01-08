@@ -39,7 +39,7 @@ if Rails.env.development?
                                 tds[2].text
                               rescue
                                 ""
-                              end).delete(" ").sub(/\(.*\)/, "").strip,
+                              end).delete(" ").sub(/(\[|\().*(\]|\))/, "").strip,
               subdivision: (begin
                               tds[1].text
                             rescue
