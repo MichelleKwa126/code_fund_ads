@@ -142,6 +142,11 @@ ORGANIZATION_SEARCH_DIRECTIONS:
   - negative
   - zero
 
+JOB_TYPES:
+  - full_time
+  - part_time
+  - contract
+
 # SEE: https://dev.maxmind.com/geoip/legacy/codes/iso3166/
 COUNTRIES:
   #A1: Anonymous Proxy

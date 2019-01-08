@@ -26,6 +26,7 @@
 #  updated_at            :datetime         not null
 #  legacy_id             :uuid
 #  organization_id       :bigint(8)
+#  job_posting           :boolean          default(FALSE), not null
 #
 
 class Campaign < ApplicationRecord

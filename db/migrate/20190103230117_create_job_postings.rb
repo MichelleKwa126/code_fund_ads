@@ -1,9 +1,7 @@
 class CreateJobPostings < ActiveRecord::Migration[5.2]
   def change
-    add_column :campaigns, :boolean, :job_posting, null: false, default: false
-    add_column :campaigns, :point, :lonlat
+    add_column :campaigns, :job_posting, :boolean, null: false, default: false
     add_index :campaigns, :job_posting
-    add_index :campaigns, :lonlat, spatial: true
 
     create_table :job_postings do |t|
       t.bigint :organization_id, null: false
@@ -16,13 +14,12 @@ class CreateJobPostings < ActiveRecord::Migration[5.2]
       t.monetize :max_annual_salary
       t.boolean :remote, null: false, default: false
       t.string :city
-      t.string :state_province
+      t.string :province_name
+      t.string :province_code
       t.string :country_code
-      t.integer :target_radius
       t.text :url
       t.date :start_date
       t.date :end_date
-      t.point :lonlat
       t.tsvector :full_text_search
       t.timestamps
 
@@ -35,11 +32,11 @@ class CreateJobPostings < ActiveRecord::Migration[5.2]
       t.index :max_annual_salary_cents
       t.index :remote
       t.index :city
-      t.index :state_province
+      t.index :province_name
+      t.index :province_code
       t.index :country_code
       t.index :start_date
       t.index :end_date
-      t.index :lonlat, spatial: true
       t.index :full_text_search, using: :gin
     end
   end

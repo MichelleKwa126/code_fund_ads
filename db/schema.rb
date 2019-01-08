@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_21_205112) do
+ActiveRecord::Schema.define(version: 2019_01_03_230117) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_stat_statements"
@@ -81,11 +81,13 @@ ActiveRecord::Schema.define(version: 2018_12_21_205112) do
     t.datetime "updated_at", null: false
     t.uuid "legacy_id"
     t.bigint "organization_id"
+    t.boolean "job_posting", default: false, null: false
     t.index "lower((name)::text)", name: "index_campaigns_on_name"
     t.index ["core_hours_only"], name: "index_campaigns_on_core_hours_only"
     t.index ["countries"], name: "index_campaigns_on_countries", using: :gin
     t.index ["creative_id"], name: "index_campaigns_on_creative_id"
     t.index ["end_date"], name: "index_campaigns_on_end_date"
+    t.index ["job_posting"], name: "index_campaigns_on_job_posting"
     t.index ["keywords"], name: "index_campaigns_on_keywords", using: :gin
     t.index ["negative_keywords"], name: "index_campaigns_on_negative_keywords", using: :gin
     t.index ["organization_id"], name: "index_campaigns_on_organization_id"
@@ -210,6 +212,45 @@ ActiveRecord::Schema.define(version: 2018_12_21_205112) do
     t.index ["property_id"], name: "impressions_default_property_id_idx"
   end
 
+  create_table "job_postings", force: :cascade do |t|
+    t.bigint "organization_id", null: false
+    t.bigint "user_id", null: false
+    t.bigint "campaign_id", null: false
+    t.string "job_type", null: false
+    t.string "title", null: false
+    t.text "description", null: false
+    t.integer "min_annual_salary_cents", default: 0, null: false
+    t.string "min_annual_salary_currency", default: "USD", null: false
+    t.integer "max_annual_salary_cents", default: 0, null: false
+    t.string "max_annual_salary_currency", default: "USD", null: false
+    t.boolean "remote", default: false, null: false
+    t.string "city"
+    t.string "province_name"
+    t.string "province_code"
+    t.string "country_code"
+    t.text "url"
+    t.date "start_date"
+    t.date "end_date"
+    t.tsvector "full_text_search"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["campaign_id"], name: "index_job_postings_on_campaign_id"
+    t.index ["city"], name: "index_job_postings_on_city"
+    t.index ["country_code"], name: "index_job_postings_on_country_code"
+    t.index ["end_date"], name: "index_job_postings_on_end_date"
+    t.index ["full_text_search"], name: "index_job_postings_on_full_text_search", using: :gin
+    t.index ["job_type"], name: "index_job_postings_on_job_type"
+    t.index ["max_annual_salary_cents"], name: "index_job_postings_on_max_annual_salary_cents"
+    t.index ["min_annual_salary_cents"], name: "index_job_postings_on_min_annual_salary_cents"
+    t.index ["organization_id"], name: "index_job_postings_on_organization_id"
+    t.index ["province_code"], name: "index_job_postings_on_province_code"
+    t.index ["province_name"], name: "index_job_postings_on_province_name"
+    t.index ["remote"], name: "index_job_postings_on_remote"
+    t.index ["start_date"], name: "index_job_postings_on_start_date"
+    t.index ["title"], name: "index_job_postings_on_title"
+    t.index ["user_id"], name: "index_job_postings_on_user_id"
+  end
+
   create_table "organization_transactions", force: :cascade do |t|
     t.bigint "organization_id", null: false
     t.integer "amount_cents", default: 0, null: false
@@ -220,6 +261,8 @@ ActiveRecord::Schema.define(version: 2018_12_21_205112) do
     t.text "reference"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "gift", default: false
+    t.index ["gift"], name: "index_organization_transactions_on_gift"
     t.index ["organization_id"], name: "index_organization_transactions_on_organization_id"
     t.index ["reference"], name: "index_organization_transactions_on_reference"
     t.index ["transaction_type"], name: "index_organization_transactions_on_transaction_type"
