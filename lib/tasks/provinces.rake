@@ -24,28 +24,36 @@ if Rails.env.development?
         @count ||= 0
         rows = []
         Mechanize.new.get("http://www.unece.org" + url) do |page|
-          page.search("table")[2].search("tr").each.with_index do |tr, index|
-            next if index.zero?
-            print ", #{@count += 1}"
-            tds = tr.search("td")
-            rows << {
-              country_name: country_name.delete(" ").strip,
-              country_code: (begin
-                               tds[0].text
-                             rescue
-                               ""
-                             end).delete(" ").strip,
-              province_name: (begin
-                                tds[2].text
+          page.search("table").each do |table|
+            @ok = false
+            table.search("tr").each.with_index do |tr, index|
+              @ok ||= begin
+                content = tr.search("td").map(&:text).join
+                index.zero? && content.include?("Country") && content.include?("Subdivision") && content.include?("Name") && content.include?("Level")
+              end
+              next unless @ok
+              next if index.zero?
+              print ", #{@count += 1}"
+              tds = tr.search("td")
+              rows << {
+                country_name: country_name.delete(" ").strip,
+                country_code: (begin
+                                 tds[0].text
+                               rescue
+                                 ""
+                               end).delete(" ").strip,
+                province_name: (begin
+                                  tds[2].text
+                                rescue
+                                  ""
+                                end).delete(" ").sub(/(\[|\().*(\]|\))/, "").strip,
+                subdivision: (begin
+                                tds[1].text
                               rescue
                                 ""
-                              end).delete(" ").sub(/(\[|\().*(\]|\))/, "").strip,
-              subdivision: (begin
-                              tds[1].text
-                            rescue
-                              ""
-                            end).delete(" ").strip,
-            }
+                              end).delete(" ").strip,
+              }
+            end
           end
         end
         rows

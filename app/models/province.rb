@@ -31,7 +31,7 @@ class Province
   end
 
   def iso_code
-    "#{row["country_code"]}-#{row["subdivision"]}"
+    "#{country_code}-#{subdivision}"
   end
 
   alias id iso_code

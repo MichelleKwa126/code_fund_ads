@@ -2761,15 +2761,21 @@
   },
   {
     "country_name": "Bonaire, Sint Eustatius and Saba",
-    "country_code": "List Source",
-    "province_name": "",
-    "subdivision": "http://english.minbzk.nl; ISO 3166/MA ; Included as a subdivision of the Netherlands (NL-BQ)"
+    "country_code": "BQ",
+    "province_name": "Boneiru",
+    "subdivision": "BO"
   },
   {
     "country_name": "Bonaire, Sint Eustatius and Saba",
-    "country_code": "Code Source",
-    "province_name": "",
-    "subdivision": "ISO/TC 46/WG 2 Secretariat (*)"
+    "country_code": "BQ",
+    "province_name": "Saba",
+    "subdivision": "SA"
+  },
+  {
+    "country_name": "Bonaire, Sint Eustatius and Saba",
+    "country_code": "BQ",
+    "province_name": "Sint Eustatius",
+    "subdivision": "SE"
   },
   {
     "country_name": "Bosnia and Herzegovina",
@@ -7717,15 +7723,27 @@
   },
   {
     "country_name": "Greenland",
-    "country_code": "List Source",
-    "province_name": "",
-    "subdivision": "http://www.kanukoka.gl/12630; http://www.lovgivning.gl/gh.gl-love/dk/2008/ltl/ltl_nr_15-2008_kom_inddel/ltl_nr_15-\r\n2008_dk.htm ; http://www.statoids.com/ugl.html ; http://www.eki.ee/cgi-bin/mkn.cgi"
+    "country_code": "GL",
+    "province_name": "Kommune Kujalleq",
+    "subdivision": "KU"
   },
   {
     "country_name": "Greenland",
-    "country_code": "Code Source",
-    "province_name": "",
-    "subdivision": "ISO/TC 46/WG 2 Secretariat (*)"
+    "country_code": "GL",
+    "province_name": "Qaasuitsup Kommunia",
+    "subdivision": "QA"
+  },
+  {
+    "country_name": "Greenland",
+    "country_code": "GL",
+    "province_name": "Qeqqata Kommunia",
+    "subdivision": "QE"
+  },
+  {
+    "country_name": "Greenland",
+    "country_code": "GL",
+    "province_name": "Kommuneqarfik Sermersooq",
+    "subdivision": "SM"
   },
   {
     "country_name": "Grenada",
@@ -13381,15 +13399,411 @@
   },
   {
     "country_name": "Malta",
-    "country_code": "List Source",
-    "province_name": "",
-    "subdivision": "Information from Embassy of Malta to Paris “Local Councils Act” approved on 1993-06-30 (Act.No. XV - 1993), updated on 1999-12-21 (Act N° XXI - 1999); http://www.gov.mt"
+    "country_code": "MT",
+    "province_name": "Attard",
+    "subdivision": "01"
   },
   {
     "country_name": "Malta",
-    "country_code": "Code Source",
-    "province_name": "",
-    "subdivision": "ISO/TC 46/WG 2 Secretariat (*)"
+    "country_code": "MT",
+    "province_name": "Balzan",
+    "subdivision": "02"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Birgu",
+    "subdivision": "03"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Birkirkara",
+    "subdivision": "04"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Birżebbuġa",
+    "subdivision": "05"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Bormla",
+    "subdivision": "06"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Dingli",
+    "subdivision": "07"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Fgura",
+    "subdivision": "08"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Floriana",
+    "subdivision": "09"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Fontana",
+    "subdivision": "10"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Gudja",
+    "subdivision": "11"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Gżira",
+    "subdivision": "12"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Għajnsielem",
+    "subdivision": "13"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Għarb",
+    "subdivision": "14"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Għargħur",
+    "subdivision": "15"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Għasri",
+    "subdivision": "16"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Għaxaq",
+    "subdivision": "17"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Ħamrun",
+    "subdivision": "18"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Iklin",
+    "subdivision": "19"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Isla",
+    "subdivision": "20"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Kalkara",
+    "subdivision": "21"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Kerċem",
+    "subdivision": "22"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Kirkop",
+    "subdivision": "23"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Lija",
+    "subdivision": "24"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Luqa",
+    "subdivision": "25"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Marsa",
+    "subdivision": "26"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Marsaskala",
+    "subdivision": "27"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Marsaxlokk",
+    "subdivision": "28"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Mdina",
+    "subdivision": "29"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Mellieħa",
+    "subdivision": "30"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Mġarr",
+    "subdivision": "31"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Mosta",
+    "subdivision": "32"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Mqabba",
+    "subdivision": "33"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Msida",
+    "subdivision": "34"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Mtarfa",
+    "subdivision": "35"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Munxar",
+    "subdivision": "36"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Nadur",
+    "subdivision": "37"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Naxxar",
+    "subdivision": "38"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Paola",
+    "subdivision": "39"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Pembroke",
+    "subdivision": "40"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Pietà",
+    "subdivision": "41"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Qala",
+    "subdivision": "42"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Qormi",
+    "subdivision": "43"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Qrendi",
+    "subdivision": "44"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Rabat Gozo",
+    "subdivision": "45"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Rabat Malta",
+    "subdivision": "46"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Safi",
+    "subdivision": "47"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Saint Julian’s",
+    "subdivision": "48"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Saint John",
+    "subdivision": "49"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Saint Lawrence",
+    "subdivision": "50"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Saint Paul’s Bay",
+    "subdivision": "51"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Sannat",
+    "subdivision": "52"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Saint Lucia’s",
+    "subdivision": "53"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Santa Venera",
+    "subdivision": "54"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Siġġiewi",
+    "subdivision": "55"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Sliema",
+    "subdivision": "56"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Swieqi",
+    "subdivision": "57"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Ta’ Xbiex",
+    "subdivision": "58"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Tarxien",
+    "subdivision": "59"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Valletta",
+    "subdivision": "60"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Xagħra",
+    "subdivision": "61"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Xewkija",
+    "subdivision": "62"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Xgħajra",
+    "subdivision": "63"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Żabbar",
+    "subdivision": "64"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Żebbuġ Gozo",
+    "subdivision": "65"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Żebbuġ Malta",
+    "subdivision": "66"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Żejtun",
+    "subdivision": "67"
+  },
+  {
+    "country_name": "Malta",
+    "country_code": "MT",
+    "province_name": "Żurrieq",
+    "subdivision": "68"
   },
   {
     "country_name": "Marshall Islands",
@@ -14167,15 +14581,111 @@
   },
   {
     "country_name": "Monaco",
-    "country_code": "List Source",
-    "province_name": "",
-    "subdivision": "Direction des Communications Électroniques, Principauté de Monaco"
+    "country_code": "MC",
+    "province_name": "La Colle",
+    "subdivision": "CL"
   },
   {
     "country_name": "Monaco",
-    "country_code": "Code Source",
-    "province_name": "",
-    "subdivision": "ISO TC"
+    "country_code": "MC",
+    "province_name": "La Condamine",
+    "subdivision": "CO"
+  },
+  {
+    "country_name": "Monaco",
+    "country_code": "MC",
+    "province_name": "Fontvieille",
+    "subdivision": "FO"
+  },
+  {
+    "country_name": "Monaco",
+    "country_code": "MC",
+    "province_name": "Fontvieille",
+    "subdivision": "FO"
+  },
+  {
+    "country_name": "Monaco",
+    "country_code": "MC",
+    "province_name": "La Gare",
+    "subdivision": "GA"
+  },
+  {
+    "country_name": "Monaco",
+    "country_code": "MC",
+    "province_name": "Jardin Exotique",
+    "subdivision": "JE"
+  },
+  {
+    "country_name": "Monaco",
+    "country_code": "MC",
+    "province_name": "Larvotto",
+    "subdivision": "LA"
+  },
+  {
+    "country_name": "Monaco",
+    "country_code": "MC",
+    "province_name": "Malbousquet",
+    "subdivision": "MA"
+  },
+  {
+    "country_name": "Monaco",
+    "country_code": "MC",
+    "province_name": "Monte-Carlo",
+    "subdivision": "MC"
+  },
+  {
+    "country_name": "Monaco",
+    "country_code": "MC",
+    "province_name": "Moneghetti",
+    "subdivision": "MG"
+  },
+  {
+    "country_name": "Monaco",
+    "country_code": "MC",
+    "province_name": "Monaco-Ville",
+    "subdivision": "MO"
+  },
+  {
+    "country_name": "Monaco",
+    "country_code": "MC",
+    "province_name": "Moulins",
+    "subdivision": "MU"
+  },
+  {
+    "country_name": "Monaco",
+    "country_code": "MC",
+    "province_name": "Port-Hercule",
+    "subdivision": "PH"
+  },
+  {
+    "country_name": "Monaco",
+    "country_code": "MC",
+    "province_name": "Sainte-Dévote",
+    "subdivision": "SD"
+  },
+  {
+    "country_name": "Monaco",
+    "country_code": "MC",
+    "province_name": "La Source",
+    "subdivision": "SO"
+  },
+  {
+    "country_name": "Monaco",
+    "country_code": "MC",
+    "province_name": "Spélugues",
+    "subdivision": "SP"
+  },
+  {
+    "country_name": "Monaco",
+    "country_code": "MC",
+    "province_name": "Saint-Roman",
+    "subdivision": "SR"
+  },
+  {
+    "country_name": "Monaco",
+    "country_code": "MC",
+    "province_name": "Vallon de la Rousse",
+    "subdivision": "VR"
   },
   {
     "country_name": "Mongolia",
@@ -16195,21 +16705,99 @@
   },
   {
     "country_name": "Palestine, State of",
-    "country_code": "List Source",
-    "province_name": "",
-    "subdivision": "Palestinian National Authority – Palestine Standards Institution – Chief Executive Officer Office, 2010; http://www.pcbs.gov.ps/Default.aspx?tabID=1&lang=en; http://www.pcbs.gov.ps/Portals/_pcbs/census2007/ind_loca_09.pdf"
+    "country_code": "PS",
+    "province_name": "Bethlehem",
+    "subdivision": "BTH"
   },
   {
     "country_name": "Palestine, State of",
-    "country_code": "Code Source",
-    "province_name": "",
-    "subdivision": "Palestinian National Authority – Palestine Standards Institution – Chief Executive Officer Office, 2010 + ISO/TC46/WG 2 Secretariat (*)"
+    "country_code": "PS",
+    "province_name": "Deir El Balah",
+    "subdivision": "DEB"
   },
   {
     "country_name": "Palestine, State of",
-    "country_code": "Remark",
-    "province_name": "",
-    "subdivision": "Conventional names"
+    "country_code": "PS",
+    "province_name": "Gaza",
+    "subdivision": "GZA"
+  },
+  {
+    "country_name": "Palestine, State of",
+    "country_code": "PS",
+    "province_name": "Hebron",
+    "subdivision": "HBN"
+  },
+  {
+    "country_name": "Palestine, State of",
+    "country_code": "PS",
+    "province_name": "Jerusalem",
+    "subdivision": "JEM"
+  },
+  {
+    "country_name": "Palestine, State of",
+    "country_code": "PS",
+    "province_name": "Jenin",
+    "subdivision": "JEN"
+  },
+  {
+    "country_name": "Palestine, State of",
+    "country_code": "PS",
+    "province_name": "Jericho – Al Aghwar",
+    "subdivision": "JRH"
+  },
+  {
+    "country_name": "Palestine, State of",
+    "country_code": "PS",
+    "province_name": "Khan Yunis",
+    "subdivision": "KYS"
+  },
+  {
+    "country_name": "Palestine, State of",
+    "country_code": "PS",
+    "province_name": "Nablus",
+    "subdivision": "NBS"
+  },
+  {
+    "country_name": "Palestine, State of",
+    "country_code": "PS",
+    "province_name": "North Gaza",
+    "subdivision": "NGZ"
+  },
+  {
+    "country_name": "Palestine, State of",
+    "country_code": "PS",
+    "province_name": "Qalqilya",
+    "subdivision": "QQA"
+  },
+  {
+    "country_name": "Palestine, State of",
+    "country_code": "PS",
+    "province_name": "Ramallah",
+    "subdivision": "RBH"
+  },
+  {
+    "country_name": "Palestine, State of",
+    "country_code": "PS",
+    "province_name": "Rafah",
+    "subdivision": "RFH"
+  },
+  {
+    "country_name": "Palestine, State of",
+    "country_code": "PS",
+    "province_name": "Salfit",
+    "subdivision": "SLT"
+  },
+  {
+    "country_name": "Palestine, State of",
+    "country_code": "PS",
+    "province_name": "Tubas",
+    "subdivision": "TBS"
+  },
+  {
+    "country_name": "Palestine, State of",
+    "country_code": "PS",
+    "province_name": "Tulkarm",
+    "subdivision": "TKM"
   },
   {
     "country_name": "Panama",
@@ -18925,15 +19513,33 @@
   },
   {
     "country_name": "Singapore",
-    "country_code": "List Sources",
-    "province_name": "",
-    "subdivision": "Information from Embassy of Singapore to Paris, 2007-09-21; Statoids"
+    "country_code": "SG",
+    "province_name": "Central Singapore",
+    "subdivision": "01"
   },
   {
     "country_name": "Singapore",
-    "country_code": "Code Source",
-    "province_name": "",
-    "subdivision": "ISO/TC 46/WG 2 Secretariat (*)"
+    "country_code": "SG",
+    "province_name": "North East",
+    "subdivision": "02"
+  },
+  {
+    "country_name": "Singapore",
+    "country_code": "SG",
+    "province_name": "North West",
+    "subdivision": "03"
+  },
+  {
+    "country_name": "Singapore",
+    "country_code": "SG",
+    "province_name": "South East",
+    "subdivision": "04"
+  },
+  {
+    "country_name": "Singapore",
+    "country_code": "SG",
+    "province_name": "South West",
+    "subdivision": "05"
   },
   {
     "country_name": "Slovakia",
@@ -23971,15 +24577,45 @@
   },
   {
     "country_name": "United Arab Emirates",
-    "country_code": "List Source",
-    "province_name": "",
-    "subdivision": "PCGN 1996; FIPS 10-4; IGN 1986"
+    "country_code": "AE",
+    "province_name": "'Ajman",
+    "subdivision": "AJ"
   },
   {
     "country_name": "United Arab Emirates",
-    "country_code": "Code Source",
-    "province_name": "",
-    "subdivision": "ISO/TC 46/WG 2 Secretariat (*)"
+    "country_code": "AE",
+    "province_name": "Abū Ȥaby",
+    "subdivision": "AZ"
+  },
+  {
+    "country_name": "United Arab Emirates",
+    "country_code": "AE",
+    "province_name": "Dubayy",
+    "subdivision": "DU"
+  },
+  {
+    "country_name": "United Arab Emirates",
+    "country_code": "AE",
+    "province_name": "Al Fujayrah",
+    "subdivision": "FU"
+  },
+  {
+    "country_name": "United Arab Emirates",
+    "country_code": "AE",
+    "province_name": "Rā's al Khaymah",
+    "subdivision": "RK"
+  },
+  {
+    "country_name": "United Arab Emirates",
+    "country_code": "AE",
+    "province_name": "Ash Shāriqah",
+    "subdivision": "SH"
+  },
+  {
+    "country_name": "United Arab Emirates",
+    "country_code": "AE",
+    "province_name": "Umm al Qaywayn",
+    "subdivision": "UQ"
   },
   {
     "country_name": "United Kingdom",
