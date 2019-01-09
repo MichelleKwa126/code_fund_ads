@@ -5,7 +5,7 @@
     <%= f.input(:user_id, label: "Advertiser", collection: advertisers_for_select, required: false, input_html: { data: { controller: "select" }}) %>
   <% end %>
   <%= f.input(:statuses, collection: campaign_statuses_for_select, required: false, input_html: { multiple: true, data: { controller: "select" }}) %>
-  <%= f.input(:country_codes, collection: countries_for_select, required: false, input_html: { multiple: true, data: { controller: "select" }}) %>
+  <%= f.input(:country_codes, label: "Countries", collection: countries_for_select, required: false, input_html: { multiple: true, data: { controller: "select" }}) %>
   <%= f.input(:keywords, collection: keywords_for_select, required: false, input_html: { multiple: true, data: { controller: "select" }}) %>
   <%= f.input(:negative_keywords, collection: keywords_for_select, required: false, input_html: { multiple: true, data: { controller: "select" }}) %>
 
