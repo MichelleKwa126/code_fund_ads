@@ -27,6 +27,7 @@
 #  legacy_id             :uuid
 #  organization_id       :bigint(8)
 #  job_posting           :boolean          default(FALSE), not null
+#  provinces             :string           default([]), is an Array
 #
 
 class Campaign < ApplicationRecord
@@ -228,8 +229,9 @@ class Campaign < ApplicationRecord
   private
 
   def sort_arrays
-    self.countries = countries&.sort || []
-    self.keywords = keywords&.sort || []
-    self.negative_keywords = negative_keywords&.sort || []
+    self.countries = countries&.reject(&:blank?)&.sort || []
+    self.keywords = keywords&.reject(&:blank?)&.sort || []
+    self.negative_keywords = negative_keywords&.reject(&:blank?)&.sort || []
+    self.provinces = provinces&.reject(&:blank?)&.sort
   end
 end

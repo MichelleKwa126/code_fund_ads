@@ -22,10 +22,13 @@ class Province
     end
 
     def where(attributes = {})
-      permitted = ActionController::Parameters.new(attributes).
-        permit(:country_name, :country_code, :province_name, :subdivision, :iso_code)
       all.select do |province|
-        permitted.keys.map { |key| province.send(key) == permitted[key] }.uniq == [true]
+        attributes.keys.map do |key|
+          next unless province.respond_to?(key)
+          expected_value = attributes[key]
+          expected_value = [expected_value] unless expected_value.is_a?(Array)
+          expected_value.include? province.send(key)
+        end.uniq == [true]
       end
     end
   end
@@ -37,8 +40,12 @@ class Province
   alias id iso_code
   alias name province_name
 
+  def full_name
+    "#{name}, #{country_code}"
+  end
+
   def country
-    # TODO
+    Country.find country_code
   end
 
   def persisted?

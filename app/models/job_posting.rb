@@ -15,7 +15,8 @@
 #  max_annual_salary_currency :string           default("USD"), not null
 #  remote                     :boolean          default(FALSE), not null
 #  city                       :string
-#  state_province             :string
+#  province_name              :string
+#  province_code              :string
 #  country_code               :string
 #  url                        :text
 #  start_date                 :date

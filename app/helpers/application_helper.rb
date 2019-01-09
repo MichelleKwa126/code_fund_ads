@@ -58,7 +58,13 @@ module ApplicationHelper
   end
 
   def countries_for_select
-    ENUMS::COUNTRIES.values.zip ENUMS::COUNTRIES.keys
+    Country.all.map { |country| [country.name, country.iso_code] }
+  end
+
+  def provinces_for_stimulus
+    Province.all.map do |province|
+      { id: province.id, countryCode: province.country_code, name: province.full_name }
+    end.to_json
   end
 
   def keywords_for_select

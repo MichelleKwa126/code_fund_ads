@@ -97,7 +97,6 @@ class CampaignsController < ApplicationController
     @user = User.find(params[:user_id])
   end
 
-  # Never trust parameters from the scary internet, only allow the white list through.
   def campaign_params
     params.require(:campaign).permit(
       :user_id,
@@ -114,7 +113,8 @@ class CampaignsController < ApplicationController
       :fallback,
       countries: [],
       keywords: [],
-      negative_keywords: []
+      negative_keywords: [],
+      provinces: [],
     )
   end
 
