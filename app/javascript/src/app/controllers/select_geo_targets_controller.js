@@ -2,42 +2,42 @@ import { Controller } from 'stimulus';
 import { toArray } from '../utils';
 
 export default class extends Controller {
-  static targets = ['countriesSelect', 'provincesSelect'];
+  static targets = ['countryCodesSelect', 'provinceCodesSelect'];
 
   connect() {
-    this.provinces = JSON.parse(this.provincesSelectTarget.dataset.provinces);
-    this.updateProvinceOptions();
-    this.preselectProvinceOptions();
+    this.provinces = JSON.parse(this.provinceCodesSelectTarget.dataset.provinces);
+    this.updateProvinceCodeOptions();
+    this.preselectProvinceCodeOptions();
   }
 
-  updateProvinceOptions(event) {
+  updateProvinceCodeOptions(event) {
     if (event && event.type === 'keyup' && event.key !== 'Enter') return;
 
-    if (this.validProvinces.length === 0 || this.selectedCountries.length > 10) {
-      this.provincesSelectTarget.innerHTML = '';
-      this.provincesSelectTarget.disabled = true;
-      this.provincesSelectTarget.closest('div[data-controller="select-multiple"]').hidden = true;
-      this.provincesSelectTarget.dispatchEvent(new Event('change'));
+    if (this.validProvinces.length === 0 || this.selectedCountryCodes.length > 30) {
+      this.provinceCodesSelectTarget.innerHTML = '';
+      this.provinceCodesSelectTarget.disabled = true;
+      this.provinceCodesSelectTarget.closest('div[data-controller="select-multiple"]').hidden = true;
+      this.provinceCodesSelectTarget.dispatchEvent(new Event('change'));
       return;
     }
 
-    this.provincesSelectTarget.disabled = false;
-    this.provincesSelectTarget.closest('div[data-controller="select-multiple"]').hidden = false;
-    this.removeInvalidProvinceOptions();
-    this.addMissingProvinceOptions();
-    this.provincesSelectTarget.dispatchEvent(new Event('change'));
+    this.provinceCodesSelectTarget.disabled = false;
+    this.provinceCodesSelectTarget.closest('div[data-controller="select-multiple"]').hidden = false;
+    this.removeInvalidProvinceCodeOptions();
+    this.addMissingProvinceCodeOptions();
+    this.provinceCodesSelectTarget.dispatchEvent(new Event('change'));
   }
 
-  removeInvalidProvinceOptions() {
+  removeInvalidProvinceCodeOptions() {
     let valid = this.validProvinces;
-    this.provinceOptions.forEach(o => {
+    this.provinceCodeOptions.forEach(o => {
       let match = valid.find(p => p.countryCode === o.dataset.countryCode);
       if (!match) o.remove();
     });
   }
 
-  addMissingProvinceOptions() {
-    let options = this.provinceOptions;
+  addMissingProvinceCodeOptions() {
+    let options = this.provinceCodeOptions;
     this.validProvinces.forEach(p => {
       let match = options.find(o => o.dataset.countryCode === p.countryCode);
       if (!match) {
@@ -45,27 +45,27 @@ export default class extends Controller {
         option.value = p.id;
         option.text = p.name;
         option.dataset.countryCode = p.countryCode;
-        this.provincesSelectTarget.appendChild(option);
+        this.provinceCodesSelectTarget.appendChild(option);
       }
     });
   }
 
-  preselectProvinceOptions() {
-    this.provinceOptions.forEach(o => {
-      if (this.provincesSelectTarget.dataset.selected.indexOf(o.value) > 0) o.selected = true;
+  preselectProvinceCodeOptions() {
+    this.provinceCodeOptions.forEach(o => {
+      if (this.provinceCodesSelectTarget.dataset.selected.indexOf(o.value) > 0) o.selected = true;
     });
   }
 
-  get selectedCountries() {
-    return toArray(this.countriesSelectTarget.querySelectorAll('option:checked')).map(o => o.value);
+  get selectedCountryCodes() {
+    return toArray(this.countryCodesSelectTarget.querySelectorAll('option:checked')).map(o => o.value);
   }
 
-  get provinceOptions() {
-    return toArray(this.provincesSelectTarget.querySelectorAll('option'));
+  get provinceCodeOptions() {
+    return toArray(this.provinceCodesSelectTarget.querySelectorAll('option'));
   }
 
   get validProvinces() {
-    return this.provinces.filter(p => this.selectedCountries.find(c => c === p.countryCode));
+    return this.provinces.filter(p => this.selectedCountryCodes.find(c => c === p.countryCode));
   }
 
   //selectDevelopedMarkets(event) {

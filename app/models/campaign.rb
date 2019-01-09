@@ -66,6 +66,7 @@ class Campaign < ApplicationRecord
   scope :available_on, ->(date) { where(arel_table[:start_date].lteq(date.to_date)).where(arel_table[:end_date].gteq(date.to_date)) }
   scope :search_keywords, ->(*values) { values.blank? ? all : with_any_keywords(*values) }
   scope :search_country_codes, ->(*values) { values.blank? ? all : with_any_country_codes(*values) }
+  scope :search_province_codes, ->(*values) { values.blank? ? all : with_any_province_codes(*values) }
   scope :search_name, ->(value) { value.blank? ? all : search_column(:name, value) }
   scope :search_negative_keywords, ->(*values) { values.blank? ? all : with_any_negative(*values) }
   scope :search_status, ->(*values) { values.blank? ? all : where(status: values) }
@@ -229,6 +230,14 @@ class Campaign < ApplicationRecord
     dates = value.split(" - ")
     self.start_date = Date.strptime(dates[0], "%m/%d/%Y")
     self.end_date   = Date.strptime(dates[1], "%m/%d/%Y")
+  end
+
+  def countries
+    Country.where iso_code: country_codes
+  end
+
+  def provinces
+    Province.where iso_code: province_codes
   end
 
   # protected instance methods ................................................

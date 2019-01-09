@@ -61,10 +61,14 @@ module ApplicationHelper
     Country.all.map { |country| [country.name, country.iso_code] }
   end
 
+  def provinces_for_select
+    Province.all.map { |province| [province.full_name, province.id] }
+  end
+
   def provinces_for_stimulus
-    Province.all.map do |province|
-      { id: province.id, countryCode: province.country_code, name: province.full_name }
-    end.to_json
+    Province.all.map { |province|
+      {id: province.id, countryCode: province.country_code, name: province.full_name}
+    }.to_json
   end
 
   def keywords_for_select

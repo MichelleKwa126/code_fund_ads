@@ -22,12 +22,12 @@ class Country
 
     def where(attributes = {})
       all.select do |province|
-        attributes.keys.map do |key|
+        attributes.keys.map { |key|
           next unless province.respond_to?(key)
           expected_value = attributes[key]
           expected_value = [expected_value] unless expected_value.is_a?(Array)
           expected_value.include? province.send(key)
-        end.uniq == [true]
+        }.uniq == [true]
       end
     end
   end

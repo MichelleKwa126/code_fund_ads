@@ -111,10 +111,10 @@ class CampaignsController < ApplicationController
       :daily_budget,
       :total_budget,
       :fallback,
-      countries: [],
+      country_codes: [],
       keywords: [],
       negative_keywords: [],
-      provinces: [],
+      province_codes: [],
     )
   end
 
