@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_03_230117) do
+ActiveRecord::Schema.define(version: 2019_01_08_201954) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_stat_statements"
@@ -74,7 +74,7 @@ ActiveRecord::Schema.define(version: 2019_01_03_230117) do
     t.string "daily_budget_currency", default: "USD", null: false
     t.integer "ecpm_cents", default: 0, null: false
     t.string "ecpm_currency", default: "USD", null: false
-    t.string "countries", default: [], array: true
+    t.string "country_codes", default: [], array: true
     t.string "keywords", default: [], array: true
     t.string "negative_keywords", default: [], array: true
     t.datetime "created_at", null: false
@@ -82,15 +82,17 @@ ActiveRecord::Schema.define(version: 2019_01_03_230117) do
     t.uuid "legacy_id"
     t.bigint "organization_id"
     t.boolean "job_posting", default: false, null: false
+    t.string "province_codes", default: [], array: true
     t.index "lower((name)::text)", name: "index_campaigns_on_name"
     t.index ["core_hours_only"], name: "index_campaigns_on_core_hours_only"
-    t.index ["countries"], name: "index_campaigns_on_countries", using: :gin
+    t.index ["country_codes"], name: "index_campaigns_on_country_codes", using: :gin
     t.index ["creative_id"], name: "index_campaigns_on_creative_id"
     t.index ["end_date"], name: "index_campaigns_on_end_date"
     t.index ["job_posting"], name: "index_campaigns_on_job_posting"
     t.index ["keywords"], name: "index_campaigns_on_keywords", using: :gin
     t.index ["negative_keywords"], name: "index_campaigns_on_negative_keywords", using: :gin
     t.index ["organization_id"], name: "index_campaigns_on_organization_id"
+    t.index ["province_codes"], name: "index_campaigns_on_province_codes", using: :gin
     t.index ["start_date"], name: "index_campaigns_on_start_date"
     t.index ["status"], name: "index_campaigns_on_status"
     t.index ["user_id"], name: "index_campaigns_on_user_id"
@@ -171,6 +173,7 @@ ActiveRecord::Schema.define(version: 2019_01_03_230117) do
     t.string "ad_template"
     t.string "ad_theme"
     t.bigint "organization_id"
+    t.string "province_code"
   end
 
   create_table "impressions_default", id: false, force: :cascade do |t|
@@ -197,6 +200,7 @@ ActiveRecord::Schema.define(version: 2019_01_03_230117) do
     t.string "ad_template"
     t.string "ad_theme"
     t.bigint "organization_id"
+    t.string "province_code"
     t.index "date_trunc('hour'::text, clicked_at)", name: "impressions_default_date_trunc_idx1"
     t.index "date_trunc('hour'::text, displayed_at)", name: "impressions_default_date_trunc_idx"
     t.index ["ad_template"], name: "impressions_default_ad_template_idx"
@@ -210,6 +214,7 @@ ActiveRecord::Schema.define(version: 2019_01_03_230117) do
     t.index ["id", "advertiser_id", "displayed_at_date"], name: "impressions_default_id_advertiser_id_displayed_at_date_idx", unique: true
     t.index ["organization_id"], name: "impressions_default_organization_id_idx"
     t.index ["property_id"], name: "impressions_default_property_id_idx"
+    t.index ["province_code"], name: "impressions_default_province_code_idx"
   end
 
   create_table "job_postings", force: :cascade do |t|

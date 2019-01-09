@@ -19,7 +19,7 @@
 #  daily_budget_currency :string           default("USD"), not null
 #  ecpm_cents            :integer          default(0), not null
 #  ecpm_currency         :string           default("USD"), not null
-#  countries             :string           default([]), is an Array
+#  country_codes         :string           default([]), is an Array
 #  keywords              :string           default([]), is an Array
 #  negative_keywords     :string           default([]), is an Array
 #  created_at            :datetime         not null
@@ -27,7 +27,7 @@
 #  legacy_id             :uuid
 #  organization_id       :bigint(8)
 #  job_posting           :boolean          default(FALSE), not null
-#  provinces             :string           default([]), is an Array
+#  province_codes        :string           default([]), is an Array
 #
 
 require "test_helper"

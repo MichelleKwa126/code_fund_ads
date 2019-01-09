@@ -183,14 +183,15 @@ CREATE TABLE public.campaigns (
     daily_budget_currency character varying DEFAULT 'USD'::character varying NOT NULL,
     ecpm_cents integer DEFAULT 0 NOT NULL,
     ecpm_currency character varying DEFAULT 'USD'::character varying NOT NULL,
-    countries character varying[] DEFAULT '{}'::character varying[],
+    country_codes character varying[] DEFAULT '{}'::character varying[],
     keywords character varying[] DEFAULT '{}'::character varying[],
     negative_keywords character varying[] DEFAULT '{}'::character varying[],
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
     legacy_id uuid,
     organization_id bigint,
-    job_posting boolean DEFAULT false NOT NULL
+    job_posting boolean DEFAULT false NOT NULL,
+    province_codes character varying[] DEFAULT '{}'::character varying[]
 );
 
 
@@ -382,7 +383,8 @@ CREATE TABLE public.impressions (
     estimated_house_revenue_fractional_cents double precision,
     ad_template character varying,
     ad_theme character varying,
-    organization_id bigint
+    organization_id bigint,
+    province_code character varying
 )
 PARTITION BY RANGE (advertiser_id, displayed_at_date);
 
@@ -1203,6 +1205,20 @@ CREATE INDEX impressions_default_property_id_idx ON public.impressions_default U
 
 
 --
+-- Name: index_impressions_on_province_code; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_impressions_on_province_code ON ONLY public.impressions USING btree (province_code);
+
+
+--
+-- Name: impressions_default_province_code_idx; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX impressions_default_province_code_idx ON public.impressions_default USING btree (province_code);
+
+
+--
 -- Name: index_active_storage_attachments_on_blob_id; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -1252,10 +1268,10 @@ CREATE INDEX index_campaigns_on_core_hours_only ON public.campaigns USING btree 
 
 
 --
--- Name: index_campaigns_on_countries; Type: INDEX; Schema: public; Owner: -
+-- Name: index_campaigns_on_country_codes; Type: INDEX; Schema: public; Owner: -
 --
 
-CREATE INDEX index_campaigns_on_countries ON public.campaigns USING gin (countries);
+CREATE INDEX index_campaigns_on_country_codes ON public.campaigns USING gin (country_codes);
 
 
 --
@@ -1305,6 +1321,13 @@ CREATE INDEX index_campaigns_on_negative_keywords ON public.campaigns USING gin 
 --
 
 CREATE INDEX index_campaigns_on_organization_id ON public.campaigns USING btree (organization_id);
+
+
+--
+-- Name: index_campaigns_on_province_codes; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_campaigns_on_province_codes ON public.campaigns USING gin (province_codes);
 
 
 --
@@ -1784,6 +1807,13 @@ ALTER INDEX public.index_impressions_on_property_id ATTACH PARTITION public.impr
 
 
 --
+-- Name: impressions_default_province_code_idx; Type: INDEX ATTACH; Schema: public; Owner: -
+--
+
+ALTER INDEX public.index_impressions_on_province_code ATTACH PARTITION public.impressions_default_province_code_idx;
+
+
+--
 -- PostgreSQL database dump complete
 --
 
@@ -1810,6 +1840,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20181220201430'),
 ('20181221205112'),
 ('20181222164913'),
-('20190103230117');
+('20190103230117'),
+('20190108201954');
 
 
