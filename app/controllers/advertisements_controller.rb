@@ -113,10 +113,13 @@ class AdvertisementsController < ApplicationController
   end
 
   def set_campaign
-    campaign_relation = geo_targeted_campaigns.
-      active.available_on(Date.current).
+    campaign_relation = active.available_on(Date.current).
       select(:id, :user_id, :creative_id, :ecpm_currency, :ecpm_cents, :daily_budget_currency, :daily_budget_cents, :fallback, :start_date, :end_date, :updated_at)
-    @campaign = choose_campaign(campaign_relation.for_property_id(property_id, *keywords))
+    campaigns = campaigns.where(weekdays_only: false) if Date.current.on_weekend?
+    campaigns = campaigns.where(core_hours_only: false) if prohibited_hour?
+    @campaign = campaigns.with_all_country_codes(country_code).with_all_province_codes(province_code) if province_code.present?
+    @campaign ||= campaigns.with_all_country_codes(country_code).without_province_codes if country_code.present?
+    @campaign ||= choose_campaign(campaign_relation.for_property_id(property_id, *keywords))
     @campaign ||= choose_campaign(campaign_relation.targeted_fallback_for_property_id(property_id, *keywords), ignore_budgets: true)
     @campaign ||= choose_campaign(campaign_relation.fallback_for_property_id(property_id), ignore_budgets: true)
   end
@@ -129,15 +132,6 @@ class AdvertisementsController < ApplicationController
     campaigns = campaign_relation.to_a
     campaigns.select! { |campaign| campaign.daily_budget_available? } unless ignore_budgets
     campaigns.sample
-  end
-
-  def geo_targeted_campaigns
-    campaigns = Campaign.all
-    campaigns = campaigns.with_all_country_codes(country_code) if country_code.present?
-    campaigns = campaigns.with_all_province_codes(province_code) if province_code.present?
-    campaigns = campaigns.where(weekdays_only: false) if Date.current.on_weekend?
-    campaigns = campaigns.where(core_hours_only: false) if prohibited_hour?
-    campaigns
   end
 
   def advertisement_cache_key
