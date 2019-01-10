@@ -64,6 +64,8 @@ class Campaign < ApplicationRecord
   scope :active, -> { where status: ENUMS::CAMPAIGN_STATUSES::ACTIVE }
   scope :archived, -> { where status: ENUMS::CAMPAIGN_STATUSES::ARCHIVED }
   scope :fallback, -> { where fallback: true }
+  scope :premium, -> { where fallback: false }
+  scope :job_posting, -> { where job_posting: true }
   scope :available_on, ->(date) { where(arel_table[:start_date].lteq(date.to_date)).where(arel_table[:end_date].gteq(date.to_date)) }
   scope :search_keywords, ->(*values) { values.blank? ? all : with_any_keywords(*values) }
   scope :search_country_codes, ->(*values) { values.blank? ? all : with_any_country_codes(*values) }
@@ -83,26 +85,24 @@ class Campaign < ApplicationRecord
   scope :for_property, ->(property, *keywords) { for_property_id property.id }
   scope :for_property_id, ->(property_id, *keywords) do
     if keywords.present?
-      permitted_for_property_id(property_id).
+      premium.permitted_for_property_id(property_id).
         with_any_keywords(*keywords).
         without_any_negative_keywords(*keywords)
     else
       subquery = Property.active.select(:keywords).where(id: property_id)
       keywords_overlap = Arel::Nodes::InfixOperation.new("&&", arel_table[:keywords], subquery.arel)
       negative_keywords_overlap = Arel::Nodes::InfixOperation.new("&&", arel_table[:negative_keywords], subquery.arel)
-      permitted_for_property_id(property_id).
+      premium.permitted_for_property_id(property_id).
         where(keywords_overlap).
         where.not(negative_keywords_overlap)
     end
   end
   scope :fallback_for_property_id, ->(property_id) do
-    permitted_for_property_id(property_id).
-      where(fallback: true).
+    fallback.permitted_for_property_id(property_id).
       where.not(fallback: Property.select(:prohibit_fallback_campaigns).where(id: property_id).limit(1))
   end
   scope :targeted_fallback_for_property_id, ->(property_id, *keywords) do
-    for_property_id(property_id, *keywords).
-      where(fallback: true).
+    fallback.for_property_id(property_id, *keywords).
       where.not(fallback: Property.select(:prohibit_fallback_campaigns).where(id: property_id).limit(1))
   end
 
@@ -216,6 +216,10 @@ class Campaign < ApplicationRecord
 
   def archived?
     ENUMS::CAMPAIGN_STATUSES.archived? status
+  end
+
+  def premium?
+    !fallback?
   end
 
   def available_on?(date)
