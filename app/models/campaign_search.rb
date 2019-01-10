@@ -19,7 +19,7 @@ class CampaignSearch < ApplicationSearchRecord
     (self.keywords ||= []).reject!(&:blank?)
     (self.negative_keywords ||= []).reject!(&:blank?)
     (self.country_codes ||= []).reject!(&:blank?)
-    (self.country_codes ||= []).reject!(&:blank?)
+    (self.province_codes ||= []).reject!(&:blank?)
     (self.statuses ||= []).reject!(&:blank?)
   end
 

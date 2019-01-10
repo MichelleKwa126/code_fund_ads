@@ -57,8 +57,13 @@ class AdvertisementsController < ApplicationController
     ip_info&.country&.iso_code
   end
 
-  def province_code
+  def subdivision
     ip_info&.subdivisions&.first&.iso_code
+  end
+
+  def province_code
+    return nil unless country_code.present? && subdivision.present?
+    "#{country_code}-#{subdivision}"
   end
 
   def time_zone_name
@@ -128,10 +133,8 @@ class AdvertisementsController < ApplicationController
 
   def geo_targeted_campaigns
     campaigns = Campaign.all
-    if country_code.present?
-      campaigns = campaigns.with_all_country_codes(country_code)
-      campaigns = campaigns.with_all_province_codes("#{country_code}-#{province_code}") if province_code.present?
-    end
+    campaigns = campaigns.with_all_country_codes(country_code) if country_code.present?
+    campaigns = campaigns.with_all_province_codes(province_code) if province_code.present?
     campaigns = campaigns.where(weekdays_only: false) if Date.current.on_weekend?
     campaigns = campaigns.where(core_hours_only: false) if prohibited_hour?
     campaigns
