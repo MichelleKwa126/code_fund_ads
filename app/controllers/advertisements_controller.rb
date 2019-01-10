@@ -137,6 +137,7 @@ class AdvertisementsController < ApplicationController
     campaigns = campaigns.with_all_province_codes(province_code) if province_code.present?
     campaigns = campaigns.where(weekdays_only: false) if Date.current.on_weekend?
     campaigns = campaigns.where(core_hours_only: false) if prohibited_hour?
+    binding.pry
     campaigns
   end
 

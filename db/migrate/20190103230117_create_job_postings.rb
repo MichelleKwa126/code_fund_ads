@@ -10,6 +10,7 @@ class CreateJobPostings < ActiveRecord::Migration[5.2]
       t.string :job_type, null: false
       t.string :title, null: false
       t.text :description, null: false
+      t.string :keywords, array: true, default: [], null: false
       t.monetize :min_annual_salary, null: false, default: Money.new(75_000, "USD")
       t.monetize :max_annual_salary
       t.boolean :remote, null: false, default: false
@@ -28,6 +29,7 @@ class CreateJobPostings < ActiveRecord::Migration[5.2]
       t.index :campaign_id
       t.index :job_type
       t.index :title
+      t.index :keywords, using: :gin
       t.index :min_annual_salary_cents
       t.index :max_annual_salary_cents
       t.index :remote

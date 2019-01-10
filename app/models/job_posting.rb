@@ -9,6 +9,7 @@
 #  job_type                   :string           not null
 #  title                      :string           not null
 #  description                :text             not null
+#  keywords                   :string           default([]), not null, is an Array
 #  min_annual_salary_cents    :integer          default(0), not null
 #  min_annual_salary_currency :string           default("USD"), not null
 #  max_annual_salary_cents    :integer          default(0), not null
@@ -29,16 +30,17 @@
 class JobPosting < ApplicationRecord
   # extends ...................................................................
   # includes ..................................................................
+  include Taggable
 
   # relationships .............................................................
-  belongs_to :campaign
+  belongs_to :campaign, optional: true
   belongs_to :organization
   belongs_to :user
 
   # validations ...............................................................
-  validates :title, length: { within: 2..80 }
+  validates :title, length: {within: 2..80}
   validates :description, presence: true
-  validates :job_type, inclusion: { in: ENUMS::JOB_TYPES.keys }
+  validates :job_type, inclusion: {in: ENUMS::JOB_TYPES.keys}
   validates :max_annual_salary_cents, presence: true
   validates :max_annual_salary_currency, presence: true
   validates :min_annual_salary_cents, presence: true
@@ -47,7 +49,9 @@ class JobPosting < ApplicationRecord
 
   # callbacks .................................................................
   # scopes ....................................................................
+
   # additional config (i.e. accepts_nested_attribute_for etc...) ..............
+  tag_columns :keywords
 
   # class methods .............................................................
   class << self
@@ -56,8 +60,6 @@ class JobPosting < ApplicationRecord
   # public instance methods ...................................................
 
   # protected instance methods ................................................
-  protected
 
   # private instance methods ..................................................
-  private
 end

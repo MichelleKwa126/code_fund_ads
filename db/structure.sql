@@ -409,6 +409,7 @@ CREATE TABLE public.job_postings (
     job_type character varying NOT NULL,
     title character varying NOT NULL,
     description text NOT NULL,
+    keywords character varying[] DEFAULT '{}'::character varying[] NOT NULL,
     min_annual_salary_cents integer DEFAULT 0 NOT NULL,
     min_annual_salary_currency character varying DEFAULT 'USD'::character varying NOT NULL,
     max_annual_salary_cents integer DEFAULT 0 NOT NULL,
@@ -1454,6 +1455,13 @@ CREATE INDEX index_job_postings_on_full_text_search ON public.job_postings USING
 --
 
 CREATE INDEX index_job_postings_on_job_type ON public.job_postings USING btree (job_type);
+
+
+--
+-- Name: index_job_postings_on_keywords; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_job_postings_on_keywords ON public.job_postings USING gin (keywords);
 
 
 --

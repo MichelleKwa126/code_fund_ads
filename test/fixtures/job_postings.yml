@@ -10,6 +10,7 @@
 #  job_type                   :string           not null
 #  title                      :string           not null
 #  description                :text             not null
+#  keywords                   :string           default([]), not null, is an Array
 #  min_annual_salary_cents    :integer          default(0), not null
 #  min_annual_salary_currency :string           default("USD"), not null
 #  max_annual_salary_cents    :integer          default(0), not null

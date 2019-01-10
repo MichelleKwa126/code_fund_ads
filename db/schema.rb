@@ -224,6 +224,7 @@ ActiveRecord::Schema.define(version: 2019_01_08_201954) do
     t.string "job_type", null: false
     t.string "title", null: false
     t.text "description", null: false
+    t.string "keywords", default: [], null: false, array: true
     t.integer "min_annual_salary_cents", default: 0, null: false
     t.string "min_annual_salary_currency", default: "USD", null: false
     t.integer "max_annual_salary_cents", default: 0, null: false
@@ -245,6 +246,7 @@ ActiveRecord::Schema.define(version: 2019_01_08_201954) do
     t.index ["end_date"], name: "index_job_postings_on_end_date"
     t.index ["full_text_search"], name: "index_job_postings_on_full_text_search", using: :gin
     t.index ["job_type"], name: "index_job_postings_on_job_type"
+    t.index ["keywords"], name: "index_job_postings_on_keywords", using: :gin
     t.index ["max_annual_salary_cents"], name: "index_job_postings_on_max_annual_salary_cents"
     t.index ["min_annual_salary_cents"], name: "index_job_postings_on_min_annual_salary_cents"
     t.index ["organization_id"], name: "index_job_postings_on_organization_id"
