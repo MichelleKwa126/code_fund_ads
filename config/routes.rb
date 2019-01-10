@@ -15,6 +15,12 @@ Rails.application.routes.draw do
     invitations: "invitations",
   }
 
+  # https://jobs.codefund.app/
+  constraints subdomain: "jobs" do
+    resources :job_postings, path: "/listings"
+    root "job_postings#index"
+  end
+
   resource :contact, only: [:show, :create]
   resource :administrator_dashboards, only: [:show], path: "/dashboards/administrator"
   resource :advertiser_dashboards, only: [:show], path: "/dashboards/advertiser"

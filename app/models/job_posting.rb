@@ -36,7 +36,7 @@ class JobPosting < ApplicationRecord
   belongs_to :user
 
   # validations ...............................................................
-  validates :title, within: 2..80
+  validates :title, length: { within: 2..80 }
   validates :description, presence: true
   validates :job_type, inclusion: { in: ENUMS::JOB_TYPES.keys }
   validates :max_annual_salary_cents, presence: true
