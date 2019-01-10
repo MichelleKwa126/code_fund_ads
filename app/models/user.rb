@@ -68,6 +68,7 @@ class User < ApplicationRecord
 
   # relationships .............................................................
   belongs_to :organization, optional: true
+  has_many :job_postings
 
   # validations ...............................................................
   validates :first_name, presence: true

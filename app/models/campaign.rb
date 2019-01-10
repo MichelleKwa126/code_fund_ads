@@ -49,6 +49,7 @@ class Campaign < ApplicationRecord
   # relationships .............................................................
   belongs_to :creative, optional: true
   belongs_to :user
+  has_many :job_postings
 
   # validations ...............................................................
   validates :name, length: {maximum: 255, allow_blank: false}
