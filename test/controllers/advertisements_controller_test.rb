@@ -8,7 +8,6 @@ class AdvertisementsControllerTest < ActionDispatch::IntegrationTest
     property = matched_property(campaign)
     get advertisements_url(property, format: :js)
     assert_response :success
-    #binding.pry
     assert response.body.include?("targetElement.innerHTML = '<div id=\"cf\"")
   end
 

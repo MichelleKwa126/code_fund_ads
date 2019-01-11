@@ -6,7 +6,9 @@ class CreateJobPostings < ActiveRecord::Migration[5.2]
     create_table :job_postings do |t|
       t.bigint :organization_id, null: false
       t.bigint :user_id, null: false
-      t.bigint :campaign_id, null: false
+      t.bigint :campaign_id
+      t.string :source, null: false, default: ENUMS::JOB_SOURCES::INTERNAL
+      t.string :source_identifier
       t.string :job_type, null: false
       t.string :title, null: false
       t.text :description, null: false
@@ -27,6 +29,8 @@ class CreateJobPostings < ActiveRecord::Migration[5.2]
       t.index :organization_id
       t.index :user_id
       t.index :campaign_id
+      t.index :source
+      t.index :source_identifier
       t.index :job_type
       t.index :title
       t.index :keywords, using: :gin

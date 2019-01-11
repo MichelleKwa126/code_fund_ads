@@ -147,6 +147,10 @@ JOB_TYPES:
   - part_time
   - contract
 
+JOB_SOURCES:
+  - internal
+  - remoteok
+
 LANGUAGES:
   - Albanian
   - Armenian

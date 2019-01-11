@@ -405,7 +405,9 @@ CREATE TABLE public.job_postings (
     id bigint NOT NULL,
     organization_id bigint NOT NULL,
     user_id bigint NOT NULL,
-    campaign_id bigint NOT NULL,
+    campaign_id bigint,
+    source character varying DEFAULT 'internal'::character varying NOT NULL,
+    source_identifier character varying,
     job_type character varying NOT NULL,
     title character varying NOT NULL,
     description text NOT NULL,
@@ -1504,6 +1506,20 @@ CREATE INDEX index_job_postings_on_province_name ON public.job_postings USING bt
 --
 
 CREATE INDEX index_job_postings_on_remote ON public.job_postings USING btree (remote);
+
+
+--
+-- Name: index_job_postings_on_source; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_job_postings_on_source ON public.job_postings USING btree (source);
+
+
+--
+-- Name: index_job_postings_on_source_identifier; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_job_postings_on_source_identifier ON public.job_postings USING btree (source_identifier);
 
 
 --
