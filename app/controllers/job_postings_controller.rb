@@ -2,7 +2,8 @@ class JobPostingsController < ApplicationController
   before_action :set_job_posting, except: [:index, :new, :create]
 
   def index
-    @job_postings = JobPosting.all
+    job_postings = JobPosting.order(posted_at_date: :desc)
+    @pagy, @job_postings = pagy(job_postings, items: 30)
   end
 
   def show

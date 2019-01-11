@@ -14,17 +14,20 @@ class ImportRemoteokJobsJob < ApplicationJob
 
       posting = JobPosting.remoteok.where(source_identifier: job["id"]).first_or_initialize
 
-      posting.user         = user
-      posting.organization = organization
-      posting.job_type     = ENUMS::JOB_TYPES::FULL_TIME
-      posting.title        = job["position"]
-      posting.description  = job["description"]
-      posting.keywords     = job["tags"]
-      posting.remote       = true
-      posting.url          = job["url"]
-      posting.start_date   = Date.parse(job["date"])
-      posting.end_date     = posting.start_date + 60.days
-      posting.source       = ENUMS::JOB_SOURCES::REMOTEOK
+      posting.user             = user
+      posting.organization     = organization
+      posting.company_name     = job["company"]
+      posting.company_logo_url = job["company_logo"]
+      posting.job_type         = ENUMS::JOB_TYPES::FULL_TIME
+      posting.title            = job["position"]
+      posting.description      = job["description"]
+      posting.keywords         = job["tags"]
+      posting.remote           = true
+      posting.url              = job["url"]
+      posting.posted_at_date   = Time.at(job["epoch"].to_i).to_date
+      posting.start_date       = posting.posted_at_date
+      posting.end_date         = posting.start_date + 60.days
+      posting.source           = ENUMS::JOB_SOURCES::REMOTEOK
       posting.save
     end
 

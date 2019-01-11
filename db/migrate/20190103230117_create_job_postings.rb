@@ -10,6 +10,8 @@ class CreateJobPostings < ActiveRecord::Migration[5.2]
       t.string :source, null: false, default: ENUMS::JOB_SOURCES::INTERNAL
       t.string :source_identifier
       t.string :job_type, null: false
+      t.string :company_name
+      t.string :company_logo_url
       t.string :title, null: false
       t.text :description, null: false
       t.string :keywords, array: true, default: [], null: false
@@ -21,6 +23,7 @@ class CreateJobPostings < ActiveRecord::Migration[5.2]
       t.string :province_code
       t.string :country_code
       t.text :url
+      t.date :posted_at_date, null: false
       t.date :start_date
       t.date :end_date
       t.tsvector :full_text_search
@@ -32,6 +35,7 @@ class CreateJobPostings < ActiveRecord::Migration[5.2]
       t.index :source
       t.index :source_identifier
       t.index :job_type
+      t.index :company_name
       t.index :title
       t.index :keywords, using: :gin
       t.index :min_annual_salary_cents
@@ -41,6 +45,7 @@ class CreateJobPostings < ActiveRecord::Migration[5.2]
       t.index :province_name
       t.index :province_code
       t.index :country_code
+      t.index :posted_at_date
       t.index :start_date
       t.index :end_date
       t.index :full_text_search, using: :gin

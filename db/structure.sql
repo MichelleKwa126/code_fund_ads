@@ -409,6 +409,8 @@ CREATE TABLE public.job_postings (
     source character varying DEFAULT 'internal'::character varying NOT NULL,
     source_identifier character varying,
     job_type character varying NOT NULL,
+    company_name character varying,
+    company_logo_url character varying,
     title character varying NOT NULL,
     description text NOT NULL,
     keywords character varying[] DEFAULT '{}'::character varying[] NOT NULL,
@@ -422,6 +424,7 @@ CREATE TABLE public.job_postings (
     province_code character varying,
     country_code character varying,
     url text,
+    posted_at_date date NOT NULL,
     start_date date,
     end_date date,
     full_text_search tsvector,
@@ -1432,6 +1435,13 @@ CREATE INDEX index_job_postings_on_city ON public.job_postings USING btree (city
 
 
 --
+-- Name: index_job_postings_on_company_name; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_job_postings_on_company_name ON public.job_postings USING btree (company_name);
+
+
+--
 -- Name: index_job_postings_on_country_code; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -1485,6 +1495,13 @@ CREATE INDEX index_job_postings_on_min_annual_salary_cents ON public.job_posting
 --
 
 CREATE INDEX index_job_postings_on_organization_id ON public.job_postings USING btree (organization_id);
+
+
+--
+-- Name: index_job_postings_on_posted_at_date; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_job_postings_on_posted_at_date ON public.job_postings USING btree (posted_at_date);
 
 
 --
