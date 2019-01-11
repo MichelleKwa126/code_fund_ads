@@ -120,13 +120,10 @@ class AdvertisementsController < ApplicationController
   end
 
   def choose_campaign(campaign_relation, ignore_budgets: false)
-    unless ignore_budgets
-      campaign_relation = campaign_relation.
-        joins(:organization).where(Organization.arel_table[:balance_cents].gt(0))
-    end
-    campaigns = campaign_relation.to_a
-    campaigns.select! { |campaign| campaign.daily_budget_available? } unless ignore_budgets
-    campaigns.sample
+    return campaign_relation.to_a.sample if ignore_budgets
+    campaign_relation = campaign_relation.joins(:organization).where(Organization.arel_table[:balance_cents].gt(0))
+    campaigns = campaign_relation.to_a.select! { |campaign| campaign.daily_budget_available? }
+    campaigns.sort(&:daily_remaining_budget).last
   end
 
   def geo_targeted_campaigns
