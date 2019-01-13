@@ -53,25 +53,10 @@
   <!-- End Hero Section -->
 
   <!-- Jobs Section -->
-  <div class="container space-2">
-    <ul class="list-group list-group-flush">
-      <% @job_postings.each do |job| %>
-        <li class="list-group-item d-flex justify-content-between align-items-center py-3 px-2">
-          <span>
-            <%= image_tag job.company_logo_url, class: "u-avatar d-none d-md-block",
-                  style: "position: absolute; left: -60px; top: 24px;" if job.company_logo_url.present? %>
-            <%= link_to job.title, job, class: "lead text-dark", style: "font-weight: bold;" %>
-            <div class="mb-2"><%= job.company_name %></div>
-            <span>
-              <% job.keywords.each do |keyword| %>
-                <a class="btn btn-sm btn-soft-primary mb-1" style="padding: 3px 8px;"><%= keyword %></a>
-              <% end %>
-            </span>
-          </span>
-          <div class="d-none d-sm-block" style="width: 100px; text-align: right;"><%= job.start_date.to_s "bd" %></div>
-        </li>
-      <% end %>
+  <%= tag.div class: "container space-2", data: { controller: "load-more" } do %>
+    <ul class="list-group list-group-flush" data-target="load-more.container">
+      <%= render partial: "list_items", locals: { job_postings: @job_postings, pagy: @pagy } %>
     </ul>
-  </div>
+  <% end %>
   <!-- End Jobs Section -->
 </main>

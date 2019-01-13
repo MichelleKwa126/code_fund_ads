@@ -23,9 +23,8 @@ class CreateJobPostings < ActiveRecord::Migration[5.2]
       t.string :province_code
       t.string :country_code
       t.text :url
-      t.date :posted_at_date, null: false
-      t.date :start_date
-      t.date :end_date
+      t.date :start_date, null: false
+      t.date :end_date, null: false
       t.tsvector :full_text_search
       t.timestamps
 
@@ -45,7 +44,6 @@ class CreateJobPostings < ActiveRecord::Migration[5.2]
       t.index :province_name
       t.index :province_code
       t.index :country_code
-      t.index :posted_at_date
       t.index :start_date
       t.index :end_date
       t.index :full_text_search, using: :gin

@@ -239,9 +239,8 @@ ActiveRecord::Schema.define(version: 2019_01_08_201954) do
     t.string "province_code"
     t.string "country_code"
     t.text "url"
-    t.date "posted_at_date", null: false
-    t.date "start_date"
-    t.date "end_date"
+    t.date "start_date", null: false
+    t.date "end_date", null: false
     t.tsvector "full_text_search"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -256,7 +255,6 @@ ActiveRecord::Schema.define(version: 2019_01_08_201954) do
     t.index ["max_annual_salary_cents"], name: "index_job_postings_on_max_annual_salary_cents"
     t.index ["min_annual_salary_cents"], name: "index_job_postings_on_min_annual_salary_cents"
     t.index ["organization_id"], name: "index_job_postings_on_organization_id"
-    t.index ["posted_at_date"], name: "index_job_postings_on_posted_at_date"
     t.index ["province_code"], name: "index_job_postings_on_province_code"
     t.index ["province_name"], name: "index_job_postings_on_province_name"
     t.index ["remote"], name: "index_job_postings_on_remote"

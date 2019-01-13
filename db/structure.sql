@@ -424,9 +424,8 @@ CREATE TABLE public.job_postings (
     province_code character varying,
     country_code character varying,
     url text,
-    posted_at_date date NOT NULL,
-    start_date date,
-    end_date date,
+    start_date date NOT NULL,
+    end_date date NOT NULL,
     full_text_search tsvector,
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL
@@ -1495,13 +1494,6 @@ CREATE INDEX index_job_postings_on_min_annual_salary_cents ON public.job_posting
 --
 
 CREATE INDEX index_job_postings_on_organization_id ON public.job_postings USING btree (organization_id);
-
-
---
--- Name: index_job_postings_on_posted_at_date; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX index_job_postings_on_posted_at_date ON public.job_postings USING btree (posted_at_date);
 
 
 --

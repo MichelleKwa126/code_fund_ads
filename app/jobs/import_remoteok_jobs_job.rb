@@ -24,8 +24,7 @@ class ImportRemoteokJobsJob < ApplicationJob
       posting.keywords         = job["tags"]
       posting.remote           = true
       posting.url              = job["url"]
-      posting.posted_at_date   = Time.at(job["epoch"].to_i).to_date
-      posting.start_date       = posting.posted_at_date
+      posting.start_date       = Time.at(job["epoch"].to_i).to_date
       posting.end_date         = posting.start_date + 60.days
       posting.source           = ENUMS::JOB_SOURCES::REMOTEOK
       posting.save

@@ -50,6 +50,8 @@ class JobPosting < ApplicationRecord
   validates :remote, presence: true
   validates :source, inclusion: {in: ENUMS::JOB_SOURCES.keys}
   validates :source_identifier, presence: true, if: -> { external? }
+  validates :start_date, presence: true
+  validates :end_date, presence: true
 
   # callbacks .................................................................
 
