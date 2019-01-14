@@ -21,7 +21,7 @@ class ImportRemoteokJobsJob < ApplicationJob
       posting.job_type         = ENUMS::JOB_TYPES::FULL_TIME
       posting.title            = job["position"]
       posting.description      = job["description"]
-      posting.keywords         = job["tags"]
+      posting.keywords         = normalize_keywords(job["tags"])
       posting.remote           = true
       posting.url              = job["url"]
       posting.start_date       = Time.at(job["epoch"].to_i).to_date
@@ -45,5 +45,25 @@ class ImportRemoteokJobsJob < ApplicationJob
     end
 
     hydra.run
+  end
+
+  def normalize_keywords(tags)
+    keywords = []
+    unmatched = []
+  
+    tags.each do |tag|
+      ENUMS::KEYWORDS.keys.each do |key|
+        if ENUMS::KEYWORDS[key].include?(tag)
+          keywords << key 
+        end
+      end
+    end
+
+    if keywords.empty?
+      Rails.logger.info("Unmatched tags from remoteok: #{tags.join(', ')}")
+      keywords << "Other"
+    end
+
+    keywords.uniq.compact.sort
   end
 end

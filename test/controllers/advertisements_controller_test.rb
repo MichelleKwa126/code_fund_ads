@@ -63,7 +63,7 @@ class AdvertisementsControllerTest < ActionDispatch::IntegrationTest
       start_date: 1.month.ago,
       end_date: 1.month.from_now,
       country_codes: country_codes,
-      keywords: ENUMS::KEYWORDS.values.sample(10)
+      keywords: ENUMS::KEYWORDS.keys.sample(10)
     )
     campaign.creative.add_image! attach_large_image!(campaign.user)
     campaign
@@ -75,7 +75,7 @@ class AdvertisementsControllerTest < ActionDispatch::IntegrationTest
       status: ENUMS::CAMPAIGN_STATUSES::ARCHIVED,
       start_date: 6.months.ago,
       end_date: 4.months.ago,
-      keywords: ENUMS::KEYWORDS.values.sample(10)
+      keywords: ENUMS::KEYWORDS.keys.sample(10)
     )
     campaign
   end
