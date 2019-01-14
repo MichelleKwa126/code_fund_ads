@@ -41,7 +41,8 @@ class ImpressionsController < ApplicationController
       params[:theme],
       request.remote_ip,
       request.user_agent,
-      Time.current.iso8601
+      Time.current.iso8601,
+      params[:uplift]
     )
   end
 end
